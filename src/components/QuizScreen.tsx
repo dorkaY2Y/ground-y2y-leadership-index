@@ -1,7 +1,6 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { questions } from '../data/questions';
 import { dimensions } from '../data/dimensions';
-import { shuffleArray } from '../utils/scoring';
 import ProgressBar from './ProgressBar';
 
 interface QuizScreenProps {
@@ -11,16 +10,13 @@ interface QuizScreenProps {
 export default function QuizScreen({ onComplete }: QuizScreenProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [sliderValue, setSliderValue] = useState<number>(3);
   const [animState, setAnimState] = useState<'in' | 'out'>('in');
   const [prevDimensionId, setPrevDimensionId] = useState<string | null>(null);
   const [showDimensionIntro, setShowDimensionIntro] = useState(true);
 
   const currentQuestion = questions[currentIndex];
   const currentDimension = dimensions.find((d) => d.id === currentQuestion.dimensionId);
-
-  const shuffledAnswers = useMemo(() => {
-    return shuffleArray(currentQuestion.answers);
-  }, [currentQuestion.id]);
 
   useEffect(() => {
     if (prevDimensionId !== currentQuestion.dimensionId) {
@@ -31,8 +27,13 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
     }
   }, [currentIndex, currentQuestion.dimensionId, prevDimensionId]);
 
-  const handleAnswer = (score: number) => {
-    const newAnswers = { ...answers, [currentQuestion.id]: score };
+  useEffect(() => {
+    // Reset slider to previous answer or default to 3
+    setSliderValue(answers[currentQuestion.id] || 3);
+  }, [currentIndex, currentQuestion.id, answers]);
+
+  const handleNext = () => {
+    const newAnswers = { ...answers, [currentQuestion.id]: sliderValue };
     setAnswers(newAnswers);
 
     if (currentIndex < questions.length - 1) {
@@ -89,41 +90,63 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
         )}
 
         <div className={animState === 'in' ? 'animate-slide-in' : 'animate-slide-out'}>
-          <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-6 text-white">
+          <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-8 text-white">
             {currentQuestion.text}
           </h2>
 
-          <div className="flex flex-col gap-2.5">
-            {shuffledAnswers.map((answer, idx) => {
-              const isSelected = answers[currentQuestion.id] === answer.score;
-              return (
-                <button
-                  key={`${currentQuestion.id}-${idx}`}
-                  onClick={() => handleAnswer(answer.score)}
-                  className="w-full text-left px-4 py-3 rounded-lg border transition-all duration-150 active:scale-[0.99]"
-                  style={
-                    isSelected
-                      ? { borderColor: '#ded11450', backgroundColor: '#ded11412', color: '#fff' }
-                      : { borderColor: '#1E293B', backgroundColor: '#131B2E66', color: '#CBD5E1' }
-                  }
-                  onMouseEnter={(e) => {
-                    if (!isSelected) {
-                      e.currentTarget.style.borderColor = '#334155';
-                      e.currentTarget.style.backgroundColor = '#131B2Eaa';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isSelected) {
-                      e.currentTarget.style.borderColor = '#1E293B';
-                      e.currentTarget.style.backgroundColor = '#131B2E66';
-                    }
-                  }}
-                >
-                  <span className="text-sm leading-relaxed">{answer.text}</span>
-                </button>
-              );
-            })}
+          {/* Slider UI */}
+          <div className="mb-8">
+            {/* Labels */}
+            <div className="flex justify-between mb-3 text-xs text-ground-muted font-medium">
+              <span>Egyáltalán nem jellemző</span>
+              <span>Teljesen jellemző</span>
+            </div>
+
+            {/* Slider */}
+            <div className="relative">
+              <input
+                type="range"
+                min="1"
+                max="5"
+                step="1"
+                value={sliderValue}
+                onChange={(e) => setSliderValue(Number(e.target.value))}
+                className="w-full h-2 rounded-lg appearance-none cursor-pointer slider-custom"
+                style={{
+                  background: `linear-gradient(to right, #ded114 0%, #ded114 ${((sliderValue - 1) / 4) * 100}%, #1E293B ${((sliderValue - 1) / 4) * 100}%, #1E293B 100%)`
+                }}
+              />
+              
+              {/* Tick marks */}
+              <div className="flex justify-between mt-2 px-0.5">
+                {[1, 2, 3, 4, 5].map((val) => (
+                  <div
+                    key={val}
+                    className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                      sliderValue >= val ? 'bg-y2y' : 'bg-ground-border'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Current value display */}
+            <div className="text-center mt-4">
+              <span className="text-2xl font-bold font-mono" style={{ color: '#ded114' }}>
+                {sliderValue}
+              </span>
+              <span className="text-ground-muted text-sm ml-1">/ 5</span>
+            </div>
           </div>
+
+          {/* Next button */}
+          <button
+            onClick={handleNext}
+            className="w-full py-4 rounded-xl font-bold text-base tracking-tight transition-all duration-200 hover:brightness-110 hover:scale-[1.01] active:scale-[0.99] shadow-lg"
+            style={{ backgroundColor: '#ded114', color: '#0B1120' }}
+          >
+            {currentIndex < questions.length - 1 ? 'Következő' : 'Eredmény megtekintése'}
+          </button>
         </div>
       </div>
     </div>
