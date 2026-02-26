@@ -17,7 +17,7 @@ export const questions: Question[] = [
   {
     id: 1,
     dimensionId: 'cognitive_flexibility',
-    text: '',
+    text: 'Amikor egy bevált folyamat már nem működik...',
     leftStatement: 'Ragaszkodom a bevált módszerhez – eddig működött',
     rightStatement: 'Azonnal keresem az alternatívákat és kísérletezek',
     answers: [
@@ -31,7 +31,7 @@ export const questions: Question[] = [
   {
     id: 2,
     dimensionId: 'cognitive_flexibility',
-    text: '',
+    text: 'Egy nap alatt stratégiai meetingről operatív tűzoltásba, onnan coaching beszélgetésbe váltasz...',
     leftStatement: 'Ez a tempó szétszed – nem tudok fókuszálni',
     rightStatement: 'Élvezem a változatosságot, könnyen váltok',
     answers: [
@@ -45,7 +45,7 @@ export const questions: Question[] = [
   {
     id: 3,
     dimensionId: 'cognitive_flexibility',
-    text: '',
+    text: 'Egy kollégád radikálisan más megközelítést javasol egy projektre, mint amit te elképzeltél...',
     leftStatement: 'Frusztráló, hogy nem látja be az én elképzelésemet',
     rightStatement: 'Kíváncsi vagyok – kérem, fejtse ki részletesen',
     answers: [
@@ -59,7 +59,7 @@ export const questions: Question[] = [
   {
     id: 4,
     dimensionId: 'cognitive_flexibility',
-    text: '',
+    text: 'Az elmúlt félévben hányszor változtattál meg egy saját meggyőződésedet egy csapattag érvelése alapján?',
     leftStatement: 'A vezető dolga az irányt mutatni, nem változtatni',
     rightStatement: 'Aktívan keresem, hol tévedhetek',
     answers: [
@@ -75,7 +75,7 @@ export const questions: Question[] = [
   {
     id: 5,
     dimensionId: 'uncertainty_tolerance',
-    text: '',
+    text: 'Egy fontos projekt közben hirtelen megváltoznak a piaci feltételek...',
     leftStatement: 'Megbénulok – a bizonytalanság stresszessé tesz',
     rightStatement: 'Gyorsan felmérem és új tervet rakok össze',
     answers: [
@@ -89,7 +89,7 @@ export const questions: Question[] = [
   {
     id: 6,
     dimensionId: 'uncertainty_tolerance',
-    text: '',
+    text: 'Hogyan kommunikálsz a csapatoddal, amikor te sem tudod, mi lesz a következő negyedévben?',
     leftStatement: 'Várok, amíg lesz konkrétum, amit mondhatok',
     rightStatement: 'Nyíltan mondom – közösen keressük az irányt',
     answers: [
@@ -103,7 +103,7 @@ export const questions: Question[] = [
   {
     id: 7,
     dimensionId: 'uncertainty_tolerance',
-    text: '',
+    text: 'A te iparágadban komoly átalakulás várható a következő 3 évben (technológiai, szabályozási vagy piaci)...',
     leftStatement: 'Majd alkalmazkodom, ha eljön – most más a prioritás',
     rightStatement: 'Már most kísérletezek és építek új képességeket',
     answers: [
@@ -117,7 +117,7 @@ export const questions: Question[] = [
   {
     id: 8,
     dimensionId: 'uncertainty_tolerance',
-    text: '',
+    text: 'Vezetőként hogyan viszonyulsz a hosszú távú tervezéshez a jelenlegi környezetben?',
     leftStatement: 'Hosszú távú terv nélkül nem tudok vezetni',
     rightStatement: 'Rövid iterációkban gondolkodom, adaptálható vízióval',
     answers: [
@@ -133,8 +133,8 @@ export const questions: Question[] = [
   {
     id: 9,
     dimensionId: 'autonomy_design',
-    text: '',
-    leftStatement: 'Csínálja az én módszeremmel – az bevált',
+    text: 'Egy csapattagod más módszert választ egy feladatra, mint amit te javasolnál...',
+    leftStatement: 'Csinálja az én módszeremmel – az bevált',
     rightStatement: 'Hagyom – az eredmény számít, nem az út',
     answers: [
       { text: '', score: 5 },
@@ -147,7 +147,7 @@ export const questions: Question[] = [
   {
     id: 10,
     dimensionId: 'autonomy_design',
-    text: '',
+    text: 'Hogyan delegálsz egy komplex projektet?',
     leftStatement: 'Inkább magam csinálom – gyorsabb és biztosabb',
     rightStatement: 'Megadom a célt, a megoldást a csapat találja meg',
     answers: [
@@ -161,7 +161,7 @@ export const questions: Question[] = [
   {
     id: 11,
     dimensionId: 'autonomy_design',
-    text: '',
+    text: 'Milyen gyakran kérsz státuszfrissítést a csapatodtól egy folyamatban lévő projektnél?',
     leftStatement: 'Folyamatosan figyelem és azonnal jelzek',
     rightStatement: 'Közösen alakítjuk ki a check-in ritmust',
     answers: [
@@ -175,9 +175,9 @@ export const questions: Question[] = [
   {
     id: 12,
     dimensionId: 'autonomy_design',
-    text: '',
+    text: 'Egy junior kolléga hibázik egy fontos prezentációban...',
     leftStatement: 'Legközelebb inkább én tartom a fontos prezentációkat',
-    rightStatement: 'Megbeszéljük a tanulságot, legközelebb ő jobban csálja',
+    rightStatement: 'Megbeszéljük a tanulságot, legközelebb ő jobban csinlja',
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -191,7 +191,7 @@ export const questions: Question[] = [
   {
     id: 13,
     dimensionId: 'psychological_safety',
-    text: '',
+    text: 'Egy meetingen senki nem mond ellent a te javaslatodnak...',
     leftStatement: 'Ez azt jelenti, hogy jó az ötletem – megyünk tovább',
     rightStatement: 'Gyanús – aktívan provokálom a kritikus gondolkodást',
     answers: [
@@ -205,7 +205,7 @@ export const questions: Question[] = [
   {
     id: 14,
     dimensionId: 'psychological_safety',
-    text: '',
+    text: 'Milyen gyakran beszélsz nyíltan a saját hibáidról a csapatod előtt?',
     leftStatement: 'Soha – a vezető gyengeségeit nem kell közszemlére tenni',
     rightStatement: 'Rendszeresen – ez teremti meg a közeget',
     answers: [
@@ -219,7 +219,7 @@ export const questions: Question[] = [
   {
     id: 15,
     dimensionId: 'psychological_safety',
-    text: '',
+    text: 'Egy csapattagod zavartan bevallja, hogy nem érti az AI-t és fél, hogy el fogja veszíteni a munkáját...',
     leftStatement: 'Mindenki felelős a saját fejlődéséért',
     rightStatement: 'Megköszönöm az őszinteséget és támogatást ajánlok',
     answers: [
@@ -233,7 +233,7 @@ export const questions: Question[] = [
   {
     id: 16,
     dimensionId: 'psychological_safety',
-    text: '',
+    text: 'Hogyan kezeled, ha egy megbeszélésen két kollégád hevesen vitatkozik?',
     leftStatement: 'Eldöntöm a kérdést és lépünk tovább',
     rightStatement: 'Facilitálom – elválasztom a személyt az ügytől',
     answers: [
@@ -249,7 +249,7 @@ export const questions: Question[] = [
   {
     id: 17,
     dimensionId: 'adaptive_decision',
-    text: '',
+    text: 'Egy fontos döntésnél ellentmondásos adataid vannak...',
     leftStatement: 'Várok, amíg teljesen tisztán látom a képet',
     rightStatement: 'Hozok egy „elég jó” döntést és iterálok',
     answers: [
@@ -263,7 +263,7 @@ export const questions: Question[] = [
   {
     id: 18,
     dimensionId: 'adaptive_decision',
-    text: '',
+    text: 'Az utolsó igazán nehéz döntésednél hogyan jutottál el a végső válaszig?',
     leftStatement: 'A megérzésemre hallgatok – eddig ritkán csapott be',
     rightStatement: 'Tudatosan mérlegelem az adatokat és az intuíciót',
     answers: [
@@ -277,7 +277,7 @@ export const questions: Question[] = [
   {
     id: 19,
     dimensionId: 'adaptive_decision',
-    text: '',
+    text: 'Visszavontál-e nyílvánosan egy korábbi döntésedet, amikor új információ érkezett?',
     leftStatement: 'A következetesség fontosabb, mint a korrekció',
     rightStatement: 'Rendszeresen korrigálok nyílvánosan új info alapján',
     answers: [
@@ -291,7 +291,7 @@ export const questions: Question[] = [
   {
     id: 20,
     dimensionId: 'adaptive_decision',
-    text: '',
+    text: 'Egy döntés meghozatala előtt mennyire vagy tudatában a saját kognitív torzításaidnak?',
     leftStatement: 'Ez túl elméleti – a tapasztalat fontosabb',
     rightStatement: 'Aktívan keresem a torzításaimat és rendszereket építek',
     answers: [
@@ -307,7 +307,7 @@ export const questions: Question[] = [
   {
     id: 21,
     dimensionId: 'group_culture_awareness',
-    text: '',
+    text: 'Hogyan jellemeznéd a csapatod jelenlegi működési kultúráját?',
     leftStatement: 'Nem értem, miért kellene ezen gondolkodni',
     rightStatement: 'Pontosan tudom, milyen kultúrát építünk és miért',
     answers: [
@@ -321,7 +321,7 @@ export const questions: Question[] = [
   {
     id: 22,
     dimensionId: 'group_culture_awareness',
-    text: '',
+    text: 'A csapatodban van, aki a stabilitást szereti, és van, aki a változást...',
     leftStatement: 'Akinek nem tetszik az irány, alkalmazkodik vagy továbbáll',
     rightStatement: 'Tudatosan használom a különböző preferenciákat',
     answers: [
@@ -335,7 +335,7 @@ export const questions: Question[] = [
   {
     id: 23,
     dimensionId: 'group_culture_awareness',
-    text: '',
+    text: 'Egy új projekt indul. A csapatod egyik fele szoros együttműködést akar, a másik fele önálló munkát...',
     leftStatement: 'Megmondom, hogyan fogunk dolgozni – a vezető dönt',
     rightStatement: 'Felmérem, melyik mód illik a feladathoz',
     answers: [
@@ -349,7 +349,7 @@ export const questions: Question[] = [
   {
     id: 24,
     dimensionId: 'group_culture_awareness',
-    text: '',
+    text: 'Mennyire tudatosan váltasz vezetői stílust attól függően, hogy a csapatodnak épp mire van szüksége?',
     leftStatement: 'A jó vezető autentikus – nem kell szerepeket játszani',
     rightStatement: 'Diagnosztizálom a szükségleteket és adaptálom a stílusom',
     answers: [

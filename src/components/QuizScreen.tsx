@@ -90,6 +90,11 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
         )}
 
         <div className={animState === 'in' ? 'animate-slide-in' : 'animate-slide-out'}>
+          {/* Question text */}
+          <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-8 text-white">
+            {currentQuestion.text}
+          </h2>
+
           {/* Forced-choice slider with opposing statements */}
           <div className="mb-8">
             {/* Endpoint statements */}
