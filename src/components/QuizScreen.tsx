@@ -98,8 +98,8 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
           <div className="mb-8">
             {/* Labels */}
             <div className="flex justify-between mb-3 text-xs text-ground-muted font-medium">
-              <span>Egyáltalán nem jellemző</span>
-              <span>Teljesen jellemző</span>
+              <span>Egyáltalán nem jellemző rám</span>
+              <span>Teljesen jellemző rám</span>
             </div>
 
             {/* Slider */}
