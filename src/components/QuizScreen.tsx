@@ -90,16 +90,20 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
         )}
 
         <div className={animState === 'in' ? 'animate-slide-in' : 'animate-slide-out'}>
-          <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-8 text-white">
-            {currentQuestion.text}
-          </h2>
-
-          {/* Slider UI */}
+          {/* Forced-choice slider with opposing statements */}
           <div className="mb-8">
-            {/* Labels */}
-            <div className="flex justify-between mb-3 text-xs text-ground-muted font-medium">
-              <span>Egyáltalán nem jellemző rám</span>
-              <span>Teljesen jellemző rám</span>
+            {/* Endpoint statements */}
+            <div className="flex justify-between gap-6 mb-6">
+              <div className="flex-1 text-left">
+                <p className="text-sm sm:text-base text-ground-text leading-relaxed">
+                  {currentQuestion.leftStatement}
+                </p>
+              </div>
+              <div className="flex-1 text-right">
+                <p className="text-sm sm:text-base text-ground-text leading-relaxed">
+                  {currentQuestion.rightStatement}
+                </p>
+              </div>
             </div>
 
             {/* Slider */}
@@ -130,13 +134,6 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
               </div>
             </div>
 
-            {/* Current value display */}
-            <div className="text-center mt-4">
-              <span className="text-2xl font-bold font-mono" style={{ color: '#ded114' }}>
-                {sliderValue}
-              </span>
-              <span className="text-ground-muted text-sm ml-1">/ 5</span>
-            </div>
           </div>
 
           {/* Next button */}
