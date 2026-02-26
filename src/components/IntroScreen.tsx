@@ -27,7 +27,7 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
         <div className="mb-8 max-w-lg mx-auto">
           <p className="text-base text-ground-text/85 font-light leading-relaxed mb-4">
             Sokan kértétek, hogy legyen egy egyszerű self-assessment, amihez magatokat méritek. 
-            Nem érdekel minket a benchmark — csak az, hogy <span className="font-semibold text-white">te magad hogy tudsz fejlődni</span>.
+            Titeket nem érdekel a benchmark — csak egyszerűen szeretnétek <span className="font-semibold text-white">magatokat megmérni</span>.
           </p>
           <p className="text-sm text-ground-muted/80 font-light leading-relaxed">
             Az eredményeidet nem tároljuk és nem nézzük meg — csak akkor van értelme kitöltened, ha őszinte vagy magaddal.
