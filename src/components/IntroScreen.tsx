@@ -66,7 +66,7 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
           <p className="text-sm text-ground-text/70 leading-relaxed mb-4 max-w-md mx-auto">
             Az elmúlt 10 évben ezekre a modellekre hivatkoztunk a legtöbbet:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto text-left">
             <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
               <p className="text-xs font-semibold text-white mb-1">SCARF modell</p>
               <p className="text-[10px] text-ground-muted">Rock, 2008</p>
@@ -82,6 +82,22 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
             <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
               <p className="text-xs font-semibold text-white mb-1">Kognitív Flexibilitás</p>
               <p className="text-[10px] text-ground-muted">Diamond, 2013</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Self-Determination Theory</p>
+              <p className="text-[10px] text-ground-muted">Deci & Ryan, 1985</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Growth Mindset</p>
+              <p className="text-[10px] text-ground-muted">Dweck, 2006</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Adaptive Leadership</p>
+              <p className="text-[10px] text-ground-muted">Heifetz & Linsky, 2002</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Complexity Leadership</p>
+              <p className="text-[10px] text-ground-muted">Uhl-Bien et al., 2007</p>
             </div>
           </div>
         </div>
