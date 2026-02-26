@@ -23,10 +23,16 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
           <span className="font-semibold text-white">Megmutatjuk, hol állsz most.</span>
         </p>
 
-        {/* Privacy note */}
-        <p className="text-xs text-ground-muted mb-6 leading-relaxed max-w-sm mx-auto">
-          Az eredményeidet nem tároljuk és nem nézzük meg — csak akkor van értelme kitöltened, ha őszinte vagy magaddal.
-        </p>
+        {/* Self-assessment philosophy */}
+        <div className="mb-6 max-w-md mx-auto">
+          <p className="text-sm text-ground-text/80 leading-relaxed mb-3">
+            Sokan kértétek, hogy legyen egy egyszerű self-assessment, amihez magatokat méritek. 
+            Nem érdekel minket a benchmark — csak az, hogy <span className="font-semibold text-white">te magad hogy tudsz fejlődni</span>.
+          </p>
+          <p className="text-xs text-ground-muted leading-relaxed">
+            Az eredményeidet nem tároljuk és nem nézzük meg — csak akkor van értelme kitöltened, ha őszinte vagy magaddal.
+          </p>
+        </div>
 
         {/* Stats line */}
         <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6 text-ground-muted text-sm">
@@ -52,11 +58,32 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
           Nincsenek jó vagy rossz válaszok.
         </p>
 
-        {/* Science line */}
-        <div className="mt-10 pt-6 border-t border-ground-border/30">
-          <p className="text-[10px] text-ground-muted/40 leading-relaxed">
-            SCARF modell (Rock, 2008) · Pszichológiai Biztonság (Edmondson, 1999) · Dual-Process Theory (Kahneman, 2011) · Kognitív Flexibilitás (Diamond, 2013)
+        {/* Scientific foundation */}
+        <div className="mt-12 pt-8 border-t border-ground-border/30">
+          <p className="text-xs text-ground-muted/60 uppercase tracking-wider mb-4">
+            Tudományos alapok
           </p>
+          <p className="text-sm text-ground-text/70 leading-relaxed mb-4 max-w-md mx-auto">
+            Az elmúlt 10 évben ezekre a modellekre hivatkoztunk a legtöbbet:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto text-left">
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">SCARF modell</p>
+              <p className="text-[10px] text-ground-muted">Rock, 2008</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Pszichológiai Biztonság</p>
+              <p className="text-[10px] text-ground-muted">Edmondson, 1999</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Dual-Process Theory</p>
+              <p className="text-[10px] text-ground-muted">Kahneman, 2011</p>
+            </div>
+            <div className="bg-ground-card/30 border border-ground-border/20 rounded-lg p-3">
+              <p className="text-xs font-semibold text-white mb-1">Kognitív Flexibilitás</p>
+              <p className="text-[10px] text-ground-muted">Diamond, 2013</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
