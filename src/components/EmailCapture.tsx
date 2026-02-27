@@ -24,21 +24,16 @@ export default function EmailCapture({ result, rawAnswers, onOpenPrivacy }: Emai
     setLoading(true);
     setError('');
 
-    const dimScoreMap: Record<string, number> = {};
+    const dimension_scores: Record<string, number> = {};
     for (const d of result.dimensionScores) {
-      dimScoreMap[d.dimensionId] = d.score;
+      dimension_scores[d.dimensionId] = d.score;
     }
 
     await saveLead({
       email,
       overall_score: result.overallScore,
       profile_name: result.profileName,
-      cognitive_flexibility: dimScoreMap['cognitive_flexibility'] || 0,
-      uncertainty_tolerance: dimScoreMap['uncertainty_tolerance'] || 0,
-      autonomy_design: dimScoreMap['autonomy_design'] || 0,
-      psychological_safety: dimScoreMap['psychological_safety'] || 0,
-      adaptive_decision: dimScoreMap['adaptive_decision'] || 0,
-      group_culture_awareness: dimScoreMap['group_culture_awareness'] || 0,
+      dimension_scores,
       raw_answers: rawAnswers,
     });
 

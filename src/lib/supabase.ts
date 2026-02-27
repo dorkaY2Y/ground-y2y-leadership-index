@@ -2,9 +2,9 @@ import { createClient } from '@supabase/supabase-js';
 import { ProfileResult } from '../utils/scoring';
 import { getDimensionReport } from '../data/reportTexts';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-const emailApiUrl = import.meta.env.VITE_EMAIL_API_URL || '';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://xfqjqxkkvvcmjraibzfp.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhmcWpxeGtrdnZjbWpyYWliemZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxODU5MDEsImV4cCI6MjA4Nzc2MTkwMX0.2BJyWckw75VV1T_ozB0GPOcf8aBPIQ0VVyGmzeUfmzM';
+const emailApiUrl = import.meta.env.VITE_EMAIL_API_URL || 'https://xfqjqxkkvvcmjraibzfp.supabase.co/functions/v1/send-result-email';
 
 export const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
@@ -14,12 +14,7 @@ interface LeadData {
   email: string;
   overall_score: number;
   profile_name: string;
-  cognitive_flexibility: number;
-  uncertainty_tolerance: number;
-  autonomy_design: number;
-  psychological_safety: number;
-  adaptive_decision: number;
-  group_culture_awareness: number;
+  dimension_scores: Record<string, number>;
   raw_answers: Record<number, number>;
 }
 
@@ -31,7 +26,12 @@ export async function saveLead(data: LeadData): Promise<boolean> {
   }
 
   try {
-    const { error } = await supabase.from('leads').insert([data]);
+    const { error } = await supabase.from('email_submissions').insert([{
+      email: data.email,
+      overall_score: data.overall_score,
+      profile_name: data.profile_name,
+      dimension_scores: data.dimension_scores,
+    }]);
     if (error) {
       console.error('Supabase insert error:', error);
       saveToLocalStorage(data);
