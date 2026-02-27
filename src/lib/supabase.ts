@@ -54,7 +54,10 @@ export async function sendResultEmail(email: string, result: ProfileResult): Pro
   try {
     const response = await fetch(emailApiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${supabaseAnonKey}`,
+      },
       body: JSON.stringify({
         to: email,
         subject: 'Ground by Y2Y — A te személyes vezetői riportod',
