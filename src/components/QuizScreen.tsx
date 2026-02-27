@@ -106,16 +106,16 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
 
           {/* Forced-choice slider with opposing statements */}
           <div className="mb-8">
-            {/* Endpoint statements */}
+            {/* Endpoint statements - swap if reversed */}
             <div className="flex justify-between gap-6 mb-6">
               <div className="flex-1 text-left">
                 <p className="text-sm sm:text-base text-ground-text leading-relaxed">
-                  {currentQuestion.leftStatement}
+                  {currentQuestion.isReversed ? currentQuestion.rightStatement : currentQuestion.leftStatement}
                 </p>
               </div>
               <div className="flex-1 text-right">
                 <p className="text-sm sm:text-base text-ground-text leading-relaxed">
-                  {currentQuestion.rightStatement}
+                  {currentQuestion.isReversed ? currentQuestion.leftStatement : currentQuestion.rightStatement}
                 </p>
               </div>
             </div>
