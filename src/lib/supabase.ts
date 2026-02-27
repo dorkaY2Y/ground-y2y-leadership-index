@@ -45,7 +45,7 @@ export async function saveLead(data: LeadData): Promise<boolean> {
   }
 }
 
-export async function sendResultEmail(email: string, result: ProfileResult): Promise<boolean> {
+export async function sendResultEmail(email: string, profileResult: ProfileResult): Promise<boolean> {
   if (!emailApiUrl) {
     console.warn('Email API URL not configured (VITE_EMAIL_API_URL). Skipping email send.');
     return true;
@@ -61,10 +61,10 @@ export async function sendResultEmail(email: string, result: ProfileResult): Pro
       body: JSON.stringify({
         to: email,
         subject: 'Ground by Y2Y — A te személyes vezetői riportod',
-        profileName: result.profileName,
-        profileDescription: result.profileDescription,
-        overallScore: result.overallScore,
-        dimensions: result.dimensionScores.map((d) => ({
+        profileName: profileResult.profileName,
+        profileDescription: profileResult.profileDescription,
+        overallScore: profileResult.overallScore,
+        dimensions: profileResult.dimensionScores.map((d) => ({
           dimensionId: d.dimensionId,
           name: d.name,
           score: d.score,
@@ -80,6 +80,8 @@ export async function sendResultEmail(email: string, result: ProfileResult): Pro
       return false;
     }
 
+    const emailResult = await response.json();
+    console.log('Email sent successfully:', emailResult);
     return true;
   } catch (err) {
     console.error('Email send failed:', err);

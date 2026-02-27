@@ -105,7 +105,7 @@ function buildHtmlEmail(data: EmailPayload): string {
       <p style="color: #CBD5E1; font-size: 14px; line-height: 1.6; margin: 0 0 16px;">
         Szeretnéd, ha segítenénk a fejlődésben?
       </p>
-      <a href="https://www.y2y.hu"
+      <a href="https://www.y2y.hu/kapcsolat"
          style="display: inline-block; background-color: #ded114; color: #0B1120; font-weight: bold; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 14px;">
         Beszélgessünk →
       </a>
