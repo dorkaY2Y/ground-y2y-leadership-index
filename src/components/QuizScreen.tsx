@@ -33,7 +33,11 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
   }, [currentIndex, currentQuestion.id, answers]);
 
   const handleNext = () => {
-    const newAnswers = { ...answers, [currentQuestion.id]: sliderValue };
+    // Calculate score based on slider value and whether question is reversed
+    // If reversed: left (1) = high score (5), right (5) = low score (1)
+    // If not reversed: left (1) = low score (1), right (5) = high score (5)
+    const score = currentQuestion.isReversed ? 6 - sliderValue : sliderValue;
+    const newAnswers = { ...answers, [currentQuestion.id]: score };
     setAnswers(newAnswers);
 
     if (currentIndex < questions.length - 1) {
@@ -94,6 +98,11 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
           <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-8 text-white">
             {currentQuestion.text}
           </h2>
+
+          {/* Usage instruction */}
+          <p className="text-xs text-ground-muted/70 text-center mb-6 italic">
+            Csúsztasd a csúszkát arra az állításra, amelyik jobban jellemez téged
+          </p>
 
           {/* Forced-choice slider with opposing statements */}
           <div className="mb-8">

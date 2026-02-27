@@ -111,7 +111,7 @@ Minden dimenzióhoz 4 szint. Mindegyikhez: összefoglaló, erősség, tanács, g
 ### Szint: Javasolt fókuszterület (<2.6)
 - **Összefoglaló:** A pszichológiai biztonság a legfontosabb területed, amin érdemes dolgozni. Ha az emberek nem érzik magukat biztonságban, minden más kompetencia hatékonysága csökken.
 - **Erősséged:** Az, hogy hajlandó vagy belenézni ebbe a tükörbe, már bátorság. Sok vezető soha nem jut el idáig.
-- **Tanácsunk:** Nem arról van szó, hogy „rossz vezető" vagy — hanem arról, hogy a legtöbben nem tanultuk meg, hogyan teremtsünk pszichológiai biztonságot. Ez tanulható.
+- **Tanácsunk:** A legtöbben nem tanultuk meg, hogyan teremtsünk pszichológiai biztonságot, pedig ez alapvető a csapat hatékonyságához.
 - **Gyakorlati tipp:** Kezdd azzal, hogy a következő megbeszélésen te mondod el először, amiben bizonytalan voltál a héten. Ha te mutatod meg a sebezhetőséget, a csapat is merni fogja.
 
 ---
@@ -127,14 +127,14 @@ Minden dimenzióhoz 4 szint. Mindegyikhez: összefoglaló, erősség, tanács, g
 ### Szint: Jó úton jársz (≥3.4)
 - **Összefoglaló:** Erős döntéshozó vagy, aki a legtöbb helyzetben jól egyensúlyoz a gyorsaság és az alaposság között.
 - **Erősséged:** Általában jó döntéseket hozol, és elég rugalmas vagy ahhoz, hogy korrigálj, ha kell. A csapatod bízik a döntéseidben.
-- **Tanácsunk:** Figyelj azokra a helyzetekre, ahol hajlamos vagy halogatni: a tökéletes döntés várása gyakran rosszabb, mint egy jó döntés most. Valamint érdemes tudatosabban figyelni a kognitív torzításokra.
+- **Tanácsunk:** Figyelj azokra a helyzetekre, ahol hajlamos vagy halogatni: a tökéletes döntés várása gyakran rosszabb, mint egy elég jó döntés most. Valamint érdemes tudatosabban figyelned a kognitív torzításokra.
 - **Gyakorlati tipp:** Minden fontos döntésnél kérdezd meg magadtól: „Mi az, amit nem akarok meglátni?" A megerősítési torzítás a leggyakoribb csapda — aktívan keresd az ellentétes bizonyítékokat.
 
 ### Szint: Figyelj rá (≥2.6)
 - **Összefoglaló:** A döntéshozatalod fejlődő szinten van — rutinhelyzetben jól boldogulsz, de összetett vagy gyorsan változó szituációkban hajlamos lehetsz elakadni.
 - **Erősséged:** Az alaposságod és az, hogy nem döntesz kapkodva, értékes. Erre lehet építeni, miközben növeled a döntési sebességedet.
 - **Tanácsunk:** A legtöbb döntés visszafordítható — és a visszafordítható döntéseknél a gyorsaság fontosabb, mint a tökéletesség. Tanuld meg megkülönböztetni a „kétirányú ajtókat" az „egyirányú ajtóktól".
-- **Gyakorlati tipp:** Egy héten át jegyezd fel, mennyi időt töltöttél döntésekkel. Jelöld meg, melyik volt visszafordítható és melyik nem. A visszafordíthatóaknál próbálj fele annyi időt szánni legközelebb.
+- **Gyakorlati tipp:** Egy héten át jegyezd fel, mennyi időt töltöttél döntésekkel. Jelöld meg, melyik volt visszafordítható és melyik nem.
 
 ### Szint: Javasolt fókuszterület (<2.6)
 - **Összefoglaló:** Az adaptív döntéshozatal a legfontosabb fókuszterületed. A FLUX évtizedben a döntési sebesség és rugalmasság kritikus — és ez fejleszthető.
