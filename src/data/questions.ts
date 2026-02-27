@@ -21,7 +21,7 @@ export const questions: Question[] = [
     text: 'Amikor egy bevált folyamat már nem működik...',
     leftStatement: 'Ragaszkodom a bevált módszerhez – eddig működött',
     rightStatement: 'Azonnal keresem az alternatívákat és kísérletezek',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -51,7 +51,7 @@ export const questions: Question[] = [
     text: 'Egy kollégád radikálisan más megközelítést javasol egy projektre, mint amit te elképzeltél...',
     leftStatement: 'Frusztráló, hogy nem látja be az én elképzelésemet',
     rightStatement: 'Kíváncsi vagyok – kérem, fejtse ki részletesen',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -83,7 +83,7 @@ export const questions: Question[] = [
     text: 'Egy fontos projekt közben hirtelen megváltoznak a piaci feltételek...',
     leftStatement: 'Megbénulok – a bizonytalanság stresszessé tesz',
     rightStatement: 'Gyorsan felmérem és új tervet rakok össze',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -113,7 +113,7 @@ export const questions: Question[] = [
     text: 'A te iparágadban komoly átalakulás várható a következő 3 évben (technológiai, szabályozási vagy piaci)...',
     leftStatement: 'Majd alkalmazkodom, ha eljön – most más a prioritás',
     rightStatement: 'Már most kísérletezek és építek új képességeket',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -160,7 +160,7 @@ export const questions: Question[] = [
     text: 'Hogyan delegálsz egy komplex projektet?',
     leftStatement: 'Inkább magam csinálom – gyorsabb és biztosabb',
     rightStatement: 'Megadom a célt, a megoldást a csapat találja meg',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
@@ -190,7 +190,7 @@ export const questions: Question[] = [
     text: 'Egy junior kolléga hibázik egy fontos prezentációban...',
     leftStatement: 'Legközelebb inkább én tartom a fontos prezentációkat',
     rightStatement: 'Megbeszéljük a tanulságot, legközelebb ő jobban csinlja',
-    isReversed: false,
+    isReversed: true,
     answers: [
       { text: '', score: 5 },
       { text: '', score: 4 },
