@@ -4,7 +4,7 @@ import { getDimensionReport } from '../data/reportTexts';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://xfqjqxkkvvcmjraibzfp.supabase.co';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhmcWpxeGtrdnZjbWpyYWliemZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxODU5MDEsImV4cCI6MjA4Nzc2MTkwMX0.2BJyWckw75VV1T_ozB0GPOcf8aBPIQ0VVyGmzeUfmzM';
-const emailApiUrl = import.meta.env.VITE_EMAIL_API_URL || 'https://xfqjqxkkvvcmjraibzfp.supabase.co/functions/v1/send-result-email';
+const emailApiUrl = import.meta.env.VITE_EMAIL_API_URL || 'https://xfqjqxkkvvcmjraibzfp.supabase.co/functions/v1/hyper-handler';
 
 export const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
