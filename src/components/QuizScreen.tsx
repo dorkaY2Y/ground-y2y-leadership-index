@@ -94,10 +94,12 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
         )}
 
         <div className={animState === 'in' ? 'animate-slide-in' : 'animate-slide-out'}>
-          {/* Question text */}
-          <h2 className="text-lg sm:text-xl font-semibold leading-relaxed mb-8 text-white">
-            {currentQuestion.text}
-          </h2>
+          {/* Question text - fixed height container */}
+          <div className="mb-8" style={{ minHeight: '120px' }}>
+            <h2 className="text-lg sm:text-xl font-semibold leading-relaxed text-white">
+              {currentQuestion.text}
+            </h2>
+          </div>
 
           {/* Usage instruction */}
           <p className="text-xs text-ground-muted/70 text-center mb-6 italic">
