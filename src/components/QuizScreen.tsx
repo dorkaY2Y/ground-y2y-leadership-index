@@ -79,19 +79,22 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
           currentDimensionId={currentQuestion.dimensionId}
         />
 
-        {showDimensionIntro && currentDimension && (
-          <div
-            className="mb-5 py-2 px-3 rounded-lg border animate-fade-up flex items-center gap-2"
-            style={{
-              borderColor: `${currentDimension.color}25`,
-              backgroundColor: `${currentDimension.color}08`,
-            }}
-          >
-            <span className="text-sm font-semibold" style={{ color: currentDimension.color }}>
-              {currentDimension.name}
-            </span>
-          </div>
-        )}
+        {/* Fixed height container for dimension badge to keep layout consistent */}
+        <div className="mb-5" style={{ minHeight: '44px' }}>
+          {showDimensionIntro && currentDimension && (
+            <div
+              className="py-2 px-3 rounded-lg border animate-fade-up flex items-center gap-2"
+              style={{
+                borderColor: `${currentDimension.color}25`,
+                backgroundColor: `${currentDimension.color}08`,
+              }}
+            >
+              <span className="text-sm font-semibold" style={{ color: currentDimension.color }}>
+                {currentDimension.name}
+              </span>
+            </div>
+          )}
+        </div>
 
         <div className={animState === 'in' ? 'animate-slide-in' : 'animate-slide-out'}>
           {/* Question text - fixed height container */}
