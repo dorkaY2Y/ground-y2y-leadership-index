@@ -29,15 +29,12 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
 
   useEffect(() => {
     // Reset slider to previous answer or default to 3
-    setSliderValue(answers[currentQuestion.id] || 3);
-  }, [currentIndex, currentQuestion.id, answers]);
+    setSliderValue(answers[currentQuestion.id] ?? 3);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
 
   const handleNext = () => {
-    // Calculate score based on slider value and whether question is reversed
-    // If reversed: left (1) = high score (5), right (5) = low score (1)
-    // If not reversed: left (1) = low score (1), right (5) = high score (5)
-    const score = currentQuestion.isReversed ? 6 - sliderValue : sliderValue;
-    const newAnswers = { ...answers, [currentQuestion.id]: score };
+    const newAnswers = { ...answers, [currentQuestion.id]: sliderValue };
     setAnswers(newAnswers);
 
     if (currentIndex < questions.length - 1) {
@@ -47,7 +44,13 @@ export default function QuizScreen({ onComplete }: QuizScreenProps) {
         setAnimState('in');
       }, 300);
     } else {
-      onComplete(newAnswers);
+      // Calculate scores (apply reversal) only at the end
+      const scores: Record<number, number> = {};
+      questions.forEach((q) => {
+        const val = newAnswers[q.id] ?? 3;
+        scores[q.id] = q.isReversed ? 6 - val : val;
+      });
+      onComplete(scores);
     }
   };
 
